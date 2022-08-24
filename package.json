@@ -1,0 +1,26 @@
+{
+  "name": "currencies",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taras-Slovak/currencies.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Taras-Slovak/currencies/issues"
+  },
+  "homepage": "https://github.com/Taras-Slovak/currencies#readme",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.7.0"
+  }
+}
