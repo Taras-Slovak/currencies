@@ -15,18 +15,24 @@
     <div class="currencies__inner">
 
       <div class="currencies__item">
-        <label class="currencies__label">You send
-          <input id="search-currency" type="text" placeholder="Type some text" class="currencies__input">
-          
+        <label for="amount" class="currencies__label">
+          You send
         </label>
-        <ul class="currencies__drop"></ul>
-      </div>
+        <input value="100" id="amount" type="number" class="currencies__input">
+        <div class="currencies__dropdown">
+          <div class="currencies__dropdown-inner">
 
-      <!-- <div class="currencies__item">
-        <label class="currencies__label">Recipient gets
-          <input class="currencies__input"></input>
-        </label>
-      </div> -->
+            <input class="currencies__dropdown-input" placeholder="Send money from" autocomplete="off" tabindex="3" type="search">
+
+
+            <div class="currencies__dropdown-list">
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
 
       <div class="currencies__fee">
         <p class="currencies__txt">Fee:</p>
@@ -34,7 +40,7 @@
       </div>
 
       <div class="currencies__rate">
-        <p class="currencies__txt">Fee:</p>
+        <p class="currencies__txt">Rate:</p>
         <p class="currencies__txt">Today’s rate:</p>
       </div>
 
@@ -42,12 +48,6 @@
 
     </div>
   </div>
-
-  <div class="container">
-    <input id="search" type="text" placeholder="Type some text">
-    <ul class="drop"></ul>
-  </div>
-
   <script src="/index.6efc6676.js"></script>
 <script src="/currencies.59712999.js"></script></body>
 
