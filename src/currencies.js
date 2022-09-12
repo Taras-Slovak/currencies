@@ -1,1030 +1,1122 @@
 'use strict';
 
-const currenciesList = [{
-    "country": "Afghanistan",
-    "currency_code": "AFN"
-},
-{
-    "country": "Albania",
-    "currency_code": "ALL"
-},
-{
-    "country": "Algeria",
-    "currency_code": "DZD"
-},
-{
-    "country": "American Samoa",
-    "currency_code": "USD"
-},
-{
-    "country": "Andorra",
-    "currency_code": "EUR"
-},
-{
-    "country": "Angola",
-    "currency_code": "AOA"
-},
-{
-    "country": "Anguilla",
-    "currency_code": "XCD"
-},
-{
-    "country": "Antarctica",
-    "currency_code": "XCD"
-},
-{
-    "country": "Antigua and Barbuda",
-    "currency_code": "XCD"
-},
-{
-    "country": "Argentina",
-    "currency_code": "ARS"
-},
-{
-    "country": "Armenia",
-    "currency_code": "AMD"
-},
-{
-    "country": "Aruba",
-    "currency_code": "AWG"
-},
-{
-    "country": "Australia",
-    "currency_code": "AUD"
-},
-{
-    "country": "Austria",
-    "currency_code": "EUR"
-},
-{
-    "country": "Azerbaijan",
-    "currency_code": "AZN"
-},
-{
-    "country": "Bahamas",
-    "currency_code": "BSD"
-},
-{
-    "country": "Bahrain",
-    "currency_code": "BHD"
-},
-{
-    "country": "Bangladesh",
-    "currency_code": "BDT"
-},
-{
-    "country": "Barbados",
-    "currency_code": "BBD"
-},
-{
-    "country": "Belarus",
-    "currency_code": "BYR"
-},
-{
-    "country": "Belgium",
-    "currency_code": "EUR"
-},
-{
-    "country": "Belize",
-    "currency_code": "BZD"
-},
-{
-    "country": "Benin",
-    "currency_code": "XOF"
-},
-{
-    "country": "Bermuda",
-    "currency_code": "BMD"
-},
-{
-    "country": "Bhutan",
-    "currency_code": "BTN"
-},
-{
-    "country": "Bolivia",
-    "currency_code": "BOB"
-},
-{
-    "country": "Bosnia and Herzegovina",
-    "currency_code": "BAM"
-},
-{
-    "country": "Botswana",
-    "currency_code": "BWP"
-},
-{
-    "country": "Bouvet Island",
-    "currency_code": "NOK"
-},
-{
-    "country": "Brazil",
-    "currency_code": "BRL"
-},
-{
-    "country": "British Indian Ocean Territory",
-    "currency_code": "USD"
-},
-{
-    "country": "Brunei",
-    "currency_code": "BND"
-},
-{
-    "country": "Bulgaria",
-    "currency_code": "BGN"
-},
-{
-    "country": "Burkina Faso",
-    "currency_code": "XOF"
-},
-{
-    "country": "Burundi",
-    "currency_code": "BIF"
-},
-{
-    "country": "Cambodia",
-    "currency_code": "KHR"
-},
-{
-    "country": "Cameroon",
-    "currency_code": "XAF"
-},
-{
-    "country": "Canada",
-    "currency_code": "CAD"
-},
-{
-    "country": "Cape Verde",
-    "currency_code": "CVE"
-},
-{
-    "country": "Cayman Islands",
-    "currency_code": "KYD"
-},
-{
-    "country": "Central African Republic",
-    "currency_code": "XAF"
-},
-{
-    "country": "Chad",
-    "currency_code": "XAF"
-},
-{
-    "country": "Chile",
-    "currency_code": "CLP"
-},
-{
-    "country": "China",
-    "currency_code": "CNY"
-},
-{
-    "country": "Christmas Island",
-    "currency_code": "AUD"
-},
-{
-    "country": "Cocos (Keeling) Islands",
-    "currency_code": "AUD"
-},
-{
-    "country": "Colombia",
-    "currency_code": "COP"
-},
-{
-    "country": "Comoros",
-    "currency_code": "KMF"
-},
-{
-    "country": "Congo",
-    "currency_code": "XAF"
-},
-{
-    "country": "Cook Islands",
-    "currency_code": "NZD"
-},
-{
-    "country": "Costa Rica",
-    "currency_code": "CRC"
-},
-{
-    "country": "Croatia",
-    "currency_code": "HRK"
-},
-{
-    "country": "Cuba",
-    "currency_code": "CUP"
-},
-{
-    "country": "Cyprus",
-    "currency_code": "EUR"
-},
-{
-    "country": "Czech Republic",
-    "currency_code": "CZK"
-},
-{
-    "country": "Denmark",
-    "currency_code": "DKK"
-},
-{
-    "country": "Djibouti",
-    "currency_code": "DJF"
-},
-{
-    "country": "Dominica",
-    "currency_code": "XCD"
-},
-{
-    "country": "Dominican Republic",
-    "currency_code": "DOP"
-},
-{
-    "country": "East Timor",
-    "currency_code": "USD"
-},
-{
-    "country": "Ecuador",
-    "currency_code": "ECS"
-},
-{
-    "country": "Egypt",
-    "currency_code": "EGP"
-},
-{
-    "country": "El Salvador",
-    "currency_code": "SVC"
-},
-{
-    "country": "England",
-    "currency_code": "GBP"
-},
-{
-    "country": "Equatorial Guinea",
-    "currency_code": "XAF"
-},
-{
-    "country": "Eritrea",
-    "currency_code": "ERN"
-},
-{
-    "country": "Estonia",
-    "currency_code": "EUR"
-},
-{
-    "country": "Ethiopia",
-    "currency_code": "ETB"
-},
-{
-    "country": "Falkland Islands",
-    "currency_code": "FKP"
-},
-{
-    "country": "Faroe Islands",
-    "currency_code": "DKK"
-},
-{
-    "country": "Fiji Islands",
-    "currency_code": "FJD"
-},
-{
-    "country": "Finland",
-    "currency_code": "EUR"
-},
-{
-    "country": "France",
-    "currency_code": "EUR"
-},
-{
-    "country": "French Guiana",
-    "currency_code": "EUR"
-},
-{
-    "country": "French Polynesia",
-    "currency_code": "XPF"
-},
-{
-    "country": "French Southern territories",
-    "currency_code": "EUR"
-},
-{
-    "country": "Gabon",
-    "currency_code": "XAF"
-},
-{
-    "country": "Gambia",
-    "currency_code": "GMD"
-},
-{
-    "country": "Georgia",
-    "currency_code": "GEL"
-},
-{
-    "country": "Germany",
-    "currency_code": "EUR"
-},
-{
-    "country": "Ghana",
-    "currency_code": "GHS"
-},
-{
-    "country": "Gibraltar",
-    "currency_code": "GIP"
-},
-{
-    "country": "Greece",
-    "currency_code": "EUR"
-},
-{
-    "country": "Greenland",
-    "currency_code": "DKK"
-},
-{
-    "country": "Grenada",
-    "currency_code": "XCD"
-},
-{
-    "country": "Guadeloupe",
-    "currency_code": "EUR"
-},
-{
-    "country": "Guam",
-    "currency_code": "USD"
-},
-{
-    "country": "Guatemala",
-    "currency_code": "QTQ"
-},
-{
-    "country": "Guinea",
-    "currency_code": "GNF"
-},
-{
-    "country": "Guinea-Bissau",
-    "currency_code": "CFA"
-},
-{
-    "country": "Guyana",
-    "currency_code": "GYD"
-},
-{
-    "country": "Haiti",
-    "currency_code": "HTG"
-},
-{
-    "country": "Heard Island and McDonald Islands",
-    "currency_code": "AUD"
-},
-{
-    "country": "Holy See (Vatican City State)",
-    "currency_code": "EUR"
-},
-{
-    "country": "Honduras",
-    "currency_code": "HNL"
-},
-{
-    "country": "Hong Kong",
-    "currency_code": "HKD"
-},
-{
-    "country": "Hungary",
-    "currency_code": "HUF"
-},
-{
-    "country": "Iceland",
-    "currency_code": "ISK"
-},
-{
-    "country": "India",
-    "currency_code": "INR"
-},
-{
-    "country": "Indonesia",
-    "currency_code": "IDR"
-},
-{
-    "country": "Iran",
-    "currency_code": "IRR"
-},
-{
-    "country": "Iraq",
-    "currency_code": "IQD"
-},
-{
-    "country": "Ireland",
-    "currency_code": "EUR"
-},
-{
-    "country": "Israel",
-    "currency_code": "ILS"
-},
-{
-    "country": "Italy",
-    "currency_code": "EUR"
-},
-{
-    "country": "Ivory Coast",
-    "currency_code": "XOF"
-},
-{
-    "country": "Jamaica",
-    "currency_code": "JMD"
-},
-{
-    "country": "Japan",
-    "currency_code": "JPY"
-},
-{
-    "country": "Jordan",
-    "currency_code": "JOD"
-},
-{
-    "country": "Kazakhstan",
-    "currency_code": "KZT"
-},
-{
-    "country": "Kenya",
-    "currency_code": "KES"
-},
-{
-    "country": "Kiribati",
-    "currency_code": "AUD"
-},
-{
-    "country": "Kuwait",
-    "currency_code": "KWD"
-},
-{
-    "country": "Kyrgyzstan",
-    "currency_code": "KGS"
-},
-{
-    "country": "Laos",
-    "currency_code": "LAK"
-},
-{
-    "country": "Latvia",
-    "currency_code": "LVL"
-},
-{
-    "country": "Lebanon",
-    "currency_code": "LBP"
-},
-{
-    "country": "Lesotho",
-    "currency_code": "LSL"
-},
-{
-    "country": "Liberia",
-    "currency_code": "LRD"
-},
-{
-    "country": "Libyan Arab Jamahiriya",
-    "currency_code": "LYD"
-},
-{
-    "country": "Liechtenstein",
-    "currency_code": "CHF"
-},
-{
-    "country": "Lithuania",
-    "currency_code": "LTL"
-},
-{
-    "country": "Luxembourg",
-    "currency_code": "EUR"
-},
-{
-    "country": "Macao",
-    "currency_code": "MOP"
-},
-{
-    "country": "North Macedonia",
-    "currency_code": "MKD"
-},
-{
-    "country": "Madagascar",
-    "currency_code": "MGF"
-},
-{
-    "country": "Malawi",
-    "currency_code": "MWK"
-},
-{
-    "country": "Malaysia",
-    "currency_code": "MYR"
-},
-{
-    "country": "Maldives",
-    "currency_code": "MVR"
-},
-{
-    "country": "Mali",
-    "currency_code": "XOF"
-},
-{
-    "country": "Malta",
-    "currency_code": "EUR"
-},
-{
-    "country": "Marshall Islands",
-    "currency_code": "USD"
-},
-{
-    "country": "Martinique",
-    "currency_code": "EUR"
-},
-{
-    "country": "Mauritania",
-    "currency_code": "MRO"
-},
-{
-    "country": "Mauritius",
-    "currency_code": "MUR"
-},
-{
-    "country": "Mayotte",
-    "currency_code": "EUR"
-},
-{
-    "country": "Mexico",
-    "currency_code": "MXN"
-},
-{
-    "country": "Micronesia, Federated States of",
-    "currency_code": "USD"
-},
-{
-    "country": "Moldova",
-    "currency_code": "MDL"
-},
-{
-    "country": "Monaco",
-    "currency_code": "EUR"
-},
-{
-    "country": "Mongolia",
-    "currency_code": "MNT"
-},
-{
-    "country": "Montserrat",
-    "currency_code": "XCD"
-},
-{
-    "country": "Morocco",
-    "currency_code": "MAD"
-},
-{
-    "country": "Mozambique",
-    "currency_code": "MZN"
-},
-{
-    "country": "Myanmar",
-    "currency_code": "MMR"
-},
-{
-    "country": "Namibia",
-    "currency_code": "NAD"
-},
-{
-    "country": "Nauru",
-    "currency_code": "AUD"
-},
-{
-    "country": "Nepal",
-    "currency_code": "NPR"
-},
-{
-    "country": "Netherlands",
-    "currency_code": "EUR"
-},
-{
-    "country": "Netherlands Antilles",
-    "currency_code": "ANG"
-},
-{
-    "country": "New Caledonia",
-    "currency_code": "XPF"
-},
-{
-    "country": "New Zealand",
-    "currency_code": "NZD"
-},
-{
-    "country": "Nicaragua",
-    "currency_code": "NIO"
-},
-{
-    "country": "Niger",
-    "currency_code": "XOF"
-},
-{
-    "country": "Nigeria",
-    "currency_code": "NGN"
-},
-{
-    "country": "Niue",
-    "currency_code": "NZD"
-},
-{
-    "country": "Norfolk Island",
-    "currency_code": "AUD"
-},
-{
-    "country": "North Korea",
-    "currency_code": "KPW"
-},
-{
-    "country": "Northern Ireland",
-    "currency_code": "GBP"
-},
-{
-    "country": "Northern Mariana Islands",
-    "currency_code": "USD"
-},
-{
-    "country": "Norway",
-    "currency_code": "NOK"
-},
-{
-    "country": "Oman",
-    "currency_code": "OMR"
-},
-{
-    "country": "Pakistan",
-    "currency_code": "PKR"
-},
-{
-    "country": "Palau",
-    "currency_code": "USD"
-},
-{
-    "country": "Palestine",
-    "currency_code": null
-},
-{
-    "country": "Panama",
-    "currency_code": "PAB"
-},
-{
-    "country": "Papua New Guinea",
-    "currency_code": "PGK"
-},
-{
-    "country": "Paraguay",
-    "currency_code": "PYG"
-},
-{
-    "country": "Peru",
-    "currency_code": "PEN"
-},
-{
-    "country": "Philippines",
-    "currency_code": "PHP"
-},
-{
-    "country": "Pitcairn",
-    "currency_code": "NZD"
-},
-{
-    "country": "Poland",
-    "currency_code": "PLN"
-},
-{
-    "country": "Portugal",
-    "currency_code": "EUR"
-},
-{
-    "country": "Puerto Rico",
-    "currency_code": "USD"
-},
-{
-    "country": "Qatar",
-    "currency_code": "QAR"
-},
-{
-    "country": "Reunion",
-    "currency_code": "EUR"
-},
-{
-    "country": "Romania",
-    "currency_code": "RON"
-},
-{
-    "country": "Russian Federation",
-    "currency_code": "RUB"
-},
-{
-    "country": "Rwanda",
-    "currency_code": "RWF"
-},
-{
-    "country": "Saint Helena",
-    "currency_code": "SHP"
-},
-{
-    "country": "Saint Kitts and Nevis",
-    "currency_code": "XCD"
-},
-{
-    "country": "Saint Lucia",
-    "currency_code": "XCD"
-},
-{
-    "country": "Saint Pierre and Miquelon",
-    "currency_code": "EUR"
-},
-{
-    "country": "Saint Vincent and the Grenadines",
-    "currency_code": "XCD"
-},
-{
-    "country": "Samoa",
-    "currency_code": "WST"
-},
-{
-    "country": "San Marino",
-    "currency_code": "EUR"
-},
-{
-    "country": "Sao Tome and Principe",
-    "currency_code": "STD"
-},
-{
-    "country": "Saudi Arabia",
-    "currency_code": "SAR"
-},
-{
-    "country": "Scotland",
-    "currency_code": "GBP"
-},
-{
-    "country": "Senegal",
-    "currency_code": "XOF"
-},
-{
-    "country": "Serbia",
-    "currency_code": "RSD"
-},
-{
-    "country": "Seychelles",
-    "currency_code": "SCR"
-},
-{
-    "country": "Sierra Leone",
-    "currency_code": "SLL"
-},
-{
-    "country": "Singapore",
-    "currency_code": "SGD"
-},
-{
-    "country": "Slovakia",
-    "currency_code": "EUR"
-},
-{
-    "country": "Slovenia",
-    "currency_code": "EUR"
-},
-{
-    "country": "Solomon Islands",
-    "currency_code": "SBD"
-},
-{
-    "country": "Somalia",
-    "currency_code": "SOS"
-},
-{
-    "country": "South Africa",
-    "currency_code": "ZAR"
-},
-{
-    "country": "South Georgia and the South Sandwich Islands",
-    "currency_code": "GBP"
-},
-{
-    "country": "South Korea",
-    "currency_code": "KRW"
-},
-{
-    "country": "South Sudan",
-    "currency_code": "SSP"
-},
-{
-    "country": "Spain",
-    "currency_code": "EUR"
-},
-{
-    "country": "Sri Lanka",
-    "currency_code": "LKR"
-},
-{
-    "country": "Sudan",
-    "currency_code": "SDG"
-},
-{
-    "country": "Suriname",
-    "currency_code": "SRD"
-},
-{
-    "country": "Svalbard and Jan Mayen",
-    "currency_code": "NOK"
-},
-{
-    "country": "Swaziland",
-    "currency_code": "SZL"
-},
-{
-    "country": "Sweden",
-    "currency_code": "SEK"
-},
-{
-    "country": "Switzerland",
-    "currency_code": "CHF"
-},
-{
-    "country": "Syria",
-    "currency_code": "SYP"
-},
-{
-    "country": "Tajikistan",
-    "currency_code": "TJS"
-},
-{
-    "country": "Tanzania",
-    "currency_code": "TZS"
-},
-{
-    "country": "Thailand",
-    "currency_code": "THB"
-},
-{
-    "country": "The Democratic Republic of Congo",
-    "currency_code": "CDF"
-},
-{
-    "country": "Togo",
-    "currency_code": "XOF"
-},
-{
-    "country": "Tokelau",
-    "currency_code": "NZD"
-},
-{
-    "country": "Tonga",
-    "currency_code": "TOP"
-},
-{
-    "country": "Trinidad and Tobago",
-    "currency_code": "TTD"
-},
-{
-    "country": "Tunisia",
-    "currency_code": "TND"
-},
-{
-    "country": "Turkey",
-    "currency_code": "TRY"
-},
-{
-    "country": "Turkmenistan",
-    "currency_code": "TMT"
-},
-{
-    "country": "Turks and Caicos Islands",
-    "currency_code": "USD"
-},
-{
-    "country": "Tuvalu",
-    "currency_code": "AUD"
-},
-{
-    "country": "Uganda",
-    "currency_code": "UGX"
-},
-{
-    "country": "Ukraine",
-    "currency_code": "UAH"
-},
-{
-    "country": "United Arab Emirates",
-    "currency_code": "AED"
-},
-{
-    "country": "United Kingdom",
-    "currency_code": "GBP"
-},
-{
-    "country": "United States",
-    "currency_code": "USD"
-},
-{
-    "country": "United States Minor Outlying Islands",
-    "currency_code": "USD"
-},
-{
-    "country": "Uruguay",
-    "currency_code": "UYU"
-},
-{
-    "country": "Uzbekistan",
-    "currency_code": "UZS"
-},
-{
-    "country": "Vanuatu",
-    "currency_code": "VUV"
-},
-{
-    "country": "Venezuela",
-    "currency_code": "VEF"
-},
-{
-    "country": "Vietnam",
-    "currency_code": "VND"
-},
-{
-    "country": "Virgin Islands, British",
-    "currency_code": "USD"
-},
-{
-    "country": "Virgin Islands, U.S.",
-    "currency_code": "USD"
-},
-{
-    "country": "Wales",
-    "currency_code": "GBP"
-},
-{
-    "country": "Wallis and Futuna",
-    "currency_code": "XPF"
-},
-{
-    "country": "Western Sahara",
-    "currency_code": "MAD"
-},
-{
-    "country": "Yemen",
-    "currency_code": "YER"
-},
-{
-    "country": "Zambia",
-    "currency_code": "ZMW"
-},
-{
-    "country": "Zimbabwe",
-    "currency_code": "ZWD"
-}]
-const API = '7eec24eb54134423a8d4afb48591ad10';
+const sendList = [
+  {
+    currency_code: 'AED',
+    currency_name: 'UAE Dirham',
+    country: 'United Arab Emirates',
+  },
+  {
+    currency_code: 'AFN',
+    currency_name: 'Afghan Afghani',
+    country: 'Afghanistan',
+  },
+  {
+    currency_code: 'ALL',
+    currency_name: 'Albanian Lek',
+    country: 'Albania',
+  },
+  {
+    currency_code: 'AMD',
+    currency_name: 'Armenian Dram',
+    country: 'Armenia',
+  },
+  {
+    currency_code: 'AOA',
+    currency_name: 'Angolan Kwanza',
+    country: 'Angola',
+  },
+  {
+    currency_code: 'ARS',
+    currency_name: 'Argentine Peso',
+    country: 'Argentina',
+  },
+  {
+    currency_code: 'AUD',
+    currency_name: 'Australian Dollar',
+    country: 'Australia',
+  },
+  {
+    currency_code: 'AWG',
+    currency_name: 'Aruban Florin',
+    country: 'Aruba',
+  },
+  {
+    currency_code: 'AZN',
+    currency_name: 'Azerbaijani Manat',
+    country: 'Azerbaijan',
+  },
+  {
+    currency_code: 'BAM',
+    currency_name: 'Bosnia and Herzegovina Mark',
+    country: 'Bosnia and Herzegovina',
+  },
+  {
+    currency_code: 'BBD',
+    currency_name: 'Barbados Dollar',
+    country: 'Barbados',
+  },
+  {
+    currency_code: 'BDT',
+    currency_name: 'Bangladeshi Taka',
+    country: 'Bangladesh',
+  },
+  {
+    currency_code: 'BGN',
+    currency_name: 'Bulgarian Lev',
+    country: 'Bulgaria',
+  },
+  {
+    currency_code: 'BHD',
+    currency_name: 'Bahraini Dinar',
+    country: 'Bahrain',
+  },
+  {
+    currency_code: 'BIF',
+    currency_name: 'Burundian Franc',
+    country: 'Burundi',
+  },
+  {
+    currency_code: 'BMD',
+    currency_name: 'Bermudian Dollar',
+    country: 'Bermuda',
+  },
+  {
+    currency_code: 'BND',
+    currency_name: 'Brunei Dollar',
+    country: 'Brunei Darussalam',
+  },
+  {
+    currency_code: 'BOB',
+    currency_name: 'Bolivian Boliviano',
+    country: 'Bolivia',
+  },
+  {
+    currency_code: 'BRL',
+    currency_name: 'Brazilian Real',
+    country: 'Brazil',
+  },
+  {
+    currency_code: 'BSD',
+    currency_name: 'Bahamian Dollar',
+    country: 'The bahamas',
+  },
+  {
+    currency_code: 'BTN',
+    currency_name: 'Bhutanese Ngultrum',
+    country: 'Bhutan',
+  },
+  {
+    currency_code: 'BWP',
+    currency_name: 'Botswana Pula',
+    country: 'Botswana',
+  },
+  {
+    currency_code: 'BYN',
+    currency_name: 'Belarusian Ruble',
+    country: 'Belarus',
+  },
+  {
+    currency_code: 'BZD',
+    currency_name: 'Belize Dollar',
+    country: 'Belize',
+  },
+  {
+    currency_code: 'CAD',
+    currency_name: 'Canadian Dollar',
+    country: 'Canada',
+  },
+  {
+    currency_code: 'CDF',
+    currency_name: 'Congolese Franc',
+    country: 'Democratic Republic Of Congo',
+  },
+  {
+    currency_code: 'CHF',
+    currency_name: 'Swiss Franc',
+    country: 'Switzerland',
+  },
+  {
+    currency_code: 'CLP',
+    currency_name: 'Chilean Peso',
+    country: 'Chile',
+  },
+  {
+    currency_code: 'CNY',
+    currency_name: 'Chinese Renminbi',
+    country: 'China',
+  },
+  {
+    currency_code: 'COP',
+    currency_name: 'Colombian Peso',
+    country: 'Colombia',
+  },
+  {
+    currency_code: 'CRC',
+    currency_name: 'Costa Rican Colon',
+    country: 'Costa Rica',
+  },
+  {
+    currency_code: 'CUP',
+    currency_name: 'Cuban Peso',
+    country: 'Cuba',
+  },
+  {
+    currency_code: 'CVE',
+    currency_name: 'Cabo Verde',
+    country: 'Cabo Verde',
+  },
+  {
+    currency_code: 'CZK',
+    currency_name: 'Czech Koruna',
+    country: 'Czechia',
+  },
+  {
+    currency_code: 'DJF',
+    currency_name: 'Djiboutian Franc',
+    country: 'Djibouti',
+  },
+  {
+    currency_code: 'DKK',
+    currency_name: 'Danish Krone',
+    country: 'Denmark',
+  },
+  {
+    currency_code: 'DOP',
+    currency_name: 'Dominican Peso',
+    country: 'Dominican Republic',
+  },
+  {
+    currency_code: 'DZD',
+    currency_name: 'Algerian Dinar',
+    country: 'Algeria',
+  },
+  {
+    currency_code: 'EGP',
+    currency_name: 'Egyptian Pound',
+    country: 'Egypt',
+  },
+  {
+    currency_code: 'ERN',
+    currency_name: 'Eritrean Nakfa',
+    country: 'Eritrea',
+  },
+  {
+    currency_code: 'ETB',
+    currency_name: 'Ethiopian Birr',
+    country: 'Ethiopia',
+  },
+  {
+    currency_code: 'EUR',
+    currency_name: 'Euro',
+    country: 'European Union',
+  },
+  {
+    currency_code: 'FJD',
+    currency_name: 'Fiji Dollar',
+    country: 'Fiji',
+  },
+  {
+    currency_code: 'FKP',
+    currency_name: 'The Falkland Islands Pound',
+    country: 'The Falkland Islands',
+  },
+  {
+    currency_code: 'FOK',
+    currency_name: 'Faroese Króna',
+    country: 'The Faroe Islands',
+  },
+  {
+    currency_code: 'GBP',
+    currency_name: 'Pound Sterling',
+    country: 'United Kingdom',
+  },
+  {
+    currency_code: 'GEL',
+    currency_name: 'Georgian Lari',
+    country: 'Georgia',
+  },
+  {
+    currency_code: 'GGP',
+    currency_name: 'Guernsey Pound',
+    country: 'Guernsey',
+  },
+  {
+    currency_code: 'GHS',
+    currency_name: 'Ghanaian Cedi',
+    country: 'Ghana',
+  },
+  {
+    currency_code: 'GIP',
+    currency_name: 'Gibraltar Pound',
+    country: 'Gibraltar',
+  },
+  {
+    currency_code: 'GMD',
+    currency_name: 'Gambian Dalasi',
+    country: 'Gambia',
+  },
+  {
+    currency_code: 'GNF',
+    currency_name: 'Guinean Franc',
+    country: 'Guinea',
+  },
+  {
+    currency_code: 'GTQ',
+    currency_name: 'Guatemalan Quetzal',
+    country: 'Guatemala',
+  },
+  {
+    currency_code: 'GYD',
+    currency_name: 'Guyanese Dollar',
+    country: 'Guyana',
+  },
+  {
+    currency_code: 'HKD',
+    currency_name: 'Hong Kong Dollar',
+    country: 'Hong Kong',
+  },
+  {
+    currency_code: 'HNL',
+    currency_name: 'Honduran Lempira',
+    country: 'Honduras',
+  },
+  {
+    currency_code: 'HRK',
+    currency_name: 'Croatian Kuna',
+    country: 'Croatia',
+  },
+  {
+    currency_code: 'HTG',
+    currency_name: 'Haitian Gourde',
+    country: 'Haiti',
+  },
+  {
+    currency_code: 'HUF',
+    currency_name: 'Hungarian Forint',
+    country: 'Hungary',
+  },
+  {
+    currency_code: 'IDR',
+    currency_name: 'Indonesian Rupiah',
+    country: 'Indonesia',
+  },
+  {
+    currency_code: 'ILS',
+    currency_name: 'Israeli New Shekel',
+    country: 'Israel',
+  },
+  {
+    currency_code: 'IMP',
+    currency_name: 'Manx Pound',
+    country: 'Isle of Man',
+  },
+  {
+    currency_code: 'INR',
+    currency_name: 'Indian Rupee',
+    country: 'India',
+  },
+  {
+    currency_code: 'IQD',
+    currency_name: 'Iraqi Dinar',
+    country: 'Iraq',
+  },
+  {
+    currency_code: 'IRR',
+    currency_name: 'Iranian Rial',
+    country: 'Iran',
+  },
+  {
+    currency_code: 'ISK',
+    currency_name: 'Icelandic Króna',
+    country: 'Iceland',
+  },
+  {
+    currency_code: 'JEP',
+    currency_name: 'Jersey Pound',
+    country: 'Jersey',
+  },
+  {
+    currency_code: 'JMD',
+    currency_name: 'Jamaican Dollar',
+    country: 'Jamaica',
+  },
+  {
+    currency_code: 'JOD',
+    currency_name: 'Jordanian Dinar',
+    country: 'Jordan',
+  },
+  {
+    currency_code: 'JPY',
+    currency_name: 'Japanese Yen',
+    country: 'Japan',
+  },
+  {
+    currency_code: 'KES',
+    currency_name: 'Kenyan Shilling',
+    country: 'Kenya',
+  },
+  {
+    currency_code: 'KGS',
+    currency_name: 'Kyrgyzstani Som',
+    country: 'Kyrgyzstan',
+  },
+  {
+    currency_code: 'KHR',
+    currency_name: 'Cambodian Riel',
+    country: 'Cambodia',
+  },
+  {
+    currency_code: 'KID',
+    currency_name: 'Kiribati Dollar',
+    country: 'Kiribati',
+  },
+  {
+    currency_code: 'KMF',
+    currency_name: 'Comorian Franc',
+    country: 'The Comoros',
+  },
+  {
+    currency_code: 'KRW',
+    currency_name: 'South Korean Won',
+    country: 'The Republic Of Korea',
+  },
+  {
+    currency_code: 'KWD',
+    currency_name: 'Kuwaiti Dinar',
+    country: 'Kuwait',
+  },
+  {
+    currency_code: 'KYD',
+    currency_name: 'The Cayman Islands Dollar',
+    country: 'The Cayman Islands',
+  },
+  {
+    currency_code: 'KZT',
+    currency_name: 'Kazakhstani Tenge',
+    country: 'Kazakhstan',
+  },
+  {
+    currency_code: 'LAK',
+    currency_name: 'Lao Kip',
+    country: 'Laos',
+  },
+  {
+    currency_code: 'LBP',
+    currency_name: 'Lebanese Pound',
+    country: 'Lebanon',
+  },
+  {
+    currency_code: 'LKR',
+    currency_name: 'Sri Lanka Rupee',
+    country: 'Sri Lanka',
+  },
+  {
+    currency_code: 'LRD',
+    currency_name: 'Liberian Dollar',
+    country: 'Liberia',
+  },
+  {
+    currency_code: 'LSL',
+    currency_name: 'Lesotho Loti',
+    country: 'Lesotho',
+  },
+  {
+    currency_code: 'LYD',
+    currency_name: 'Libyan Dinar',
+    country: 'Libya',
+  },
+  {
+    currency_code: 'MAD',
+    currency_name: 'Moroccan Dirham',
+    country: 'Morocco',
+  },
+  {
+    currency_code: 'MDL',
+    currency_name: 'Moldovan Leu',
+    country: 'Moldova',
+  },
+  {
+    currency_code: 'MGA',
+    currency_name: 'Malagasy Ariary',
+    country: 'Madagascar',
+  },
+  {
+    currency_code: 'MKD',
+    currency_name: 'Macedonian Denar',
+    country: 'Republic Of North Macedonia',
+  },
+  {
+    currency_code: 'MMK',
+    currency_name: 'Burmese Kyat',
+    country: 'Myanmar',
+  },
+  {
+    currency_code: 'MNT',
+    currency_name: 'Mongolian Tögrög',
+    country: 'Mongolia',
+  },
+  {
+    currency_code: 'MOP',
+    currency_name: 'Macanese Pataca',
+    country: 'Macao',
+  },
+  {
+    currency_code: 'MRU',
+    currency_name: 'Mauritanian Ouguiya',
+    country: 'Mauritania',
+  },
+  {
+    currency_code: 'MUR',
+    currency_name: 'Mauritian Rupee',
+    country: 'Mauritius',
+  },
+  {
+    currency_code: 'MVR',
+    currency_name: 'Maldivian Rufiyaa',
+    country: 'Maldives',
+  },
+  {
+    currency_code: 'MWK',
+    currency_name: 'Malawian Kwacha',
+    country: 'Malawi',
+  },
+  {
+    currency_code: 'MXN',
+    currency_name: 'Mexican Peso',
+    country: 'Mexico',
+  },
+  {
+    currency_code: 'MYR',
+    currency_name: 'Malaysian Ringgit',
+    country: 'Malaysia',
+  },
+  {
+    currency_code: 'MZN',
+    currency_name: 'Mozambican Metical',
+    country: 'Mozambique',
+  },
+  {
+    currency_code: 'NAD',
+    currency_name: 'Namibian Dollar',
+    country: 'Namibia',
+  },
+  {
+    currency_code: 'NGN',
+    currency_name: 'Nigerian Naira',
+    country: 'Nigeria',
+  },
+  {
+    currency_code: 'NIO',
+    currency_name: 'Nicaraguan Córdoba',
+    country: 'Nicaragua',
+  },
+  {
+    currency_code: 'NOK',
+    currency_name: 'Norwegian Krone',
+    country: 'Norway',
+  },
+  {
+    currency_code: 'NPR',
+    currency_name: 'Nepalese Rupee',
+    country: 'Nepal',
+  },
+  {
+    currency_code: 'NZD',
+    currency_name: 'New Zealand Dollar',
+    country: 'New Zealand',
+  },
+  {
+    currency_code: 'OMR',
+    currency_name: 'Omani Rial',
+    country: 'Oman',
+  },
+  {
+    currency_code: 'PAB',
+    currency_name: 'Panamanian Balboa',
+    country: 'Panama',
+  },
+  {
+    currency_code: 'PEN',
+    currency_name: 'Peruvian Sol',
+    country: 'Peru',
+  },
+  {
+    currency_code: 'PGK',
+    currency_name: 'Papua New Guinean Kina',
+    country: 'Papua New Guinea',
+  },
+  {
+    currency_code: 'PHP',
+    currency_name: 'Philippine Peso',
+    country: 'Philippines',
+  },
+  {
+    currency_code: 'PKR',
+    currency_name: 'Pakistani Rupee',
+    country: 'Pakistan',
+  },
+  {
+    currency_code: 'PLN',
+    currency_name: 'Polish Złoty',
+    country: 'Poland',
+  },
+  {
+    currency_code: 'PYG',
+    currency_name: 'Paraguayan Guaraní',
+    country: 'Paraguay',
+  },
+  {
+    currency_code: 'QAR',
+    currency_name: 'Qatari Riyal',
+    country: 'Qatar',
+  },
+  {
+    currency_code: 'RON',
+    currency_name: 'Romanian Leu',
+    country: 'Romania',
+  },
+  {
+    currency_code: 'RSD',
+    currency_name: 'Serbian Dinar',
+    country: 'Serbia',
+  },
+  {
+    currency_code: 'RUB',
+    currency_name: 'Russian Federation Ruble',
+    country: 'Russian Federation',
+  },
+  {
+    currency_code: 'RWF',
+    currency_name: 'Rwandan Franc',
+    country: 'Rwanda',
+  },
+  {
+    currency_code: 'SAR',
+    currency_name: 'Saudi Riyal',
+    country: 'Saudi Arabia',
+  },
+  {
+    currency_code: 'SBD',
+    currency_name: 'Solomon Islands Dollar',
+    country: 'Solomon Islands',
+  },
+  {
+    currency_code: 'SCR',
+    currency_name: 'Seychellois Rupee',
+    country: 'Seychelles',
+  },
+  {
+    currency_code: 'SDG',
+    currency_name: 'Sudanese Pound',
+    country: 'Sudan',
+  },
+  {
+    currency_code: 'SEK',
+    currency_name: 'Swedish Krona',
+    country: 'Sweden',
+  },
+  {
+    currency_code: 'SGD',
+    currency_name: 'Singapore Dollar',
+    country: 'Singapore',
+  },
+  {
+    currency_code: 'SHP',
+    currency_name: 'Saint Helena Pound',
+    country: 'Saint Helena',
+  },
+  {
+    currency_code: 'SLE',
+    currency_name: 'Sierra Leonean Leone',
+    country: 'Sierra Leone',
+  },
+  {
+    currency_code: 'SOS',
+    currency_name: 'Somali Shilling',
+    country: 'Somalia',
+  },
+  {
+    currency_code: 'SRD',
+    currency_name: 'Surinamese Dollar',
+    country: 'Suriname',
+  },
+  {
+    currency_code: 'SSP',
+    currency_name: 'South Sudanese Pound',
+    country: 'South Sudan',
+  },
+  {
+    currency_code: 'STN',
+    currency_name: 'Sao Tome And Principe Dobra',
+    country: 'Sao Tome And Principe',
+  },
+  {
+    currency_code: 'SYP',
+    currency_name: 'Syrian Arab Republic Pound',
+    country: 'Syrian Arab Republic',
+  },
+  {
+    currency_code: 'SZL',
+    currency_name: 'Eswatini Lilangeni',
+    country: 'Eswatini',
+  },
+  {
+    currency_code: 'THB',
+    currency_name: 'Thai Baht',
+    country: 'Thailand',
+  },
+  {
+    currency_code: 'TJS',
+    currency_name: 'Tajikistani Somoni',
+    country: 'Tajikistan',
+  },
+  {
+    currency_code: 'TMT',
+    currency_name: 'Turkmenistan Manat',
+    country: 'Turkmenistan',
+  },
+  {
+    currency_code: 'TND',
+    currency_name: 'Tunisian Dinar',
+    country: 'Tunisia',
+  },
+  {
+    currency_code: 'TOP',
+    currency_name: 'Tongan Paʻanga',
+    country: 'Tonga',
+  },
+  {
+    currency_code: 'TRY',
+    currency_name: 'Turkish Lira',
+    country: 'Turkey',
+  },
+  {
+    currency_code: 'TTD',
+    currency_name: 'Trinidad and Tobago Dollar',
+    country: 'Trinidad and Tobago',
+  },
+  {
+    currency_code: 'TVD',
+    currency_name: 'Tuvaluan Dollar',
+    country: 'Tuvalu',
+  },
+  {
+    currency_code: 'TWD',
+    currency_name: 'New Taiwan Dollar',
+    country: 'Taiwan',
+  },
+  {
+    currency_code: 'TZS',
+    currency_name: 'Tanzanian Shilling',
+    country: 'Tanzania',
+  },
+  {
+    currency_code: 'UAH',
+    currency_name: 'Ukrainian Hryvnia',
+    country: 'Ukraine',
+  },
+  {
+    currency_code: 'UGX',
+    currency_name: 'Ugandan Shilling',
+    country: 'Uganda',
+  },
+  {
+    currency_code: 'USD',
+    currency_name: 'United States Dollar',
+    country: 'United States',
+  },
+  {
+    currency_code: 'UYU',
+    currency_name: 'Uruguayan Peso',
+    country: 'Uruguay',
+  },
+  {
+    currency_code: 'UZS',
+    currency_name: "Uzbekistani So'm",
+    country: 'Uzbekistan',
+  },
+  {
+    currency_code: 'VES',
+    currency_name: 'Venezuelan Bolívar Soberano',
+    country: 'Venezuela',
+  },
+  {
+    currency_code: 'VND',
+    currency_name: 'Vietnamese Đồng',
+    country: 'Vietnam',
+  },
+  {
+    currency_code: 'VUV',
+    currency_name: 'Vanuatu Vatu',
+    country: 'Vanuatu',
+  },
+  {
+    currency_code: 'WST',
+    currency_name: 'Samoan Tālā',
+    country: 'Samoa',
+  },
+  {
+    currency_code: 'YER',
+    currency_name: 'Yemeni Rial',
+    country: 'Yemen',
+  },
+  {
+    currency_code: 'ZAR',
+    currency_name: 'South African Rand',
+    country: 'South Africa',
+  },
+  {
+    currency_code: 'ZMW',
+    currency_name: 'Zambian Kwacha',
+    country: 'Zambia',
+  },
+  {
+    currency_code: 'ZWL',
+    currency_name: 'Zimbabwean Dollar',
+    country: 'Zimbabwe',
+  },
+];
 
-let array = []
+const API = '53b82b6e6d8f794c6cb34fed';
 
-const dropdownInner = document.querySelector('.currencies__dropdown-list');
+function inputSetCurrency() {
+  const dropdownList = document.querySelector('.send__content-list');
+  const dropdownInput = document.querySelector('.send__content-input');
 
+  function renderList() {
+    function createList(country, symbol) {
+      const dropdownDiv = document.createElement('div');
+      dropdownDiv.classList.add('currencies__content-field');
+      dropdownDiv.classList.add('send__content-field');
+      dropdownDiv.dataset.symbol = symbol;
+      dropdownDiv.dataset.country = country;
+      dropdownDiv.innerHTML = `
+        <div class="currencies__country send__country">
+          <img class="currencies__img send__img" src="https://countryflagsapi.com/png/${country.toLocaleLowerCase()}"></img>
+          <p class="send__txt currencies__txt">${country}</p>
+        </div>
+        <p class="currencies__symbol send__symbol">${symbol}</p>  `;
+      dropdownList.append(dropdownDiv);
+    }
 
+    sendList.map((item) => {
+      let country = Object.values(item)[2];
+      let symbol = Object.values(item)[0];
+      createList(country, symbol);
+    });
+  }
+  renderList();
 
-function renderList(country,symbol) {
-  const dropdownDiv = document.createElement('div')
-  dropdownDiv.classList.add('currencies__dropdown-field')
-  dropdownDiv.innerHTML = `
-    <p class="currencies__country">${country}</p>
-    <p class="currencies__symbol">${symbol}</p>  `
-    dropdownInner.append(dropdownDiv)
+  function filterList() {
+    let dropdownFields = [...document.querySelectorAll('.send__content-field')];
+
+    dropdownInput.addEventListener('input', () => {
+      let dropdownFieldsFiltered = [];
+
+      dropdownFieldsFiltered = dropdownFields.filter((field) => {
+        let input = dropdownInput.value.toLowerCase();
+        let symbol = field.getAttribute('data-symbol').toLowerCase();
+        let country = field.getAttribute('data-country').toLowerCase();
+
+        return country.includes(input) || symbol.includes(input);
+      });
+
+      dropdownFields.forEach((item) => item.remove());
+
+      dropdownFieldsFiltered.forEach((item) => {
+        dropdownList.append(item);
+      });
+    });
+  }
+  filterList();
+
+  function dropdownBtn() {
+    const dropdownBtn = document.querySelector('.send__dropdown-btn');
+    const dropdownContent = document.querySelector('.send__content');
+    const backElement = document.querySelectorAll('.send__back-element');
+
+    dropdownBtn.addEventListener('click', () => {
+      dropdownContent.classList.remove('hide');
+      dropdownContent.classList.add('show');
+      document.querySelector('.send').style.boxShadow = 'none';
+      document.querySelector('.get').style.display = 'none';
+      backElement.forEach((item) => {
+        item.style.display = 'none';
+      });
+    });
+
+    document.querySelectorAll('.send__content-field').forEach((item) => {
+      item.addEventListener('click', () => {
+        dropdownContent.classList.remove('show');
+        dropdownContent.classList.add('hide');
+        setImg(item.dataset.country.toLowerCase());
+        setTxt(item.dataset.symbol);
+        fetchBaseData();
+        backElement.forEach((item) => {
+          item.style.display = 'flex';
+        });
+        document.querySelector('.send').style.boxShadow = '0 0 0 1px #a09ea347';
+        document.querySelector('.get').style.display = 'flex';
+      });
+    });
+
+    function setImg(data) {
+      let img = document.querySelector('.send__dropdown-img img');
+      img.src = `https://countryflagsapi.com/png/${data}`;
+    }
+
+    async function setTxt(data) {
+      let txt = document.querySelector('.send__dropdown-txt');
+      txt.innerHTML = data;
+    }
+  }
+  dropdownBtn();
 }
 
+inputSetCurrency();
 
-const dropdownInput = document.querySelector('.currencies__dropdown-input');
+function inputGetCurrency() {
+  const dropdownList = document.querySelector('.get__content-list');
+  const dropdownInput = document.querySelector('.get__content-input');
 
-dropdownInput.addEventListener('input', ()=>{
+  function renderList() {
+    function createList(country, symbol) {
+      const dropdownDiv = document.createElement('div');
+      dropdownDiv.classList.add('currencies__content-field');
+      dropdownDiv.classList.add('get__content-field');
+      dropdownDiv.dataset.symbol = symbol;
+      dropdownDiv.dataset.country = country;
+      dropdownDiv.innerHTML = `
+        <div class="currencies__country get__country">
+          <img class="currencies__img get__img" src="https://countryflagsapi.com/png/${country.toLocaleLowerCase()}"></img>
+          <p class="get__txt currencies__txt">${country}</p>
+        </div>
+        <p class="currencies__symbol get__symbol">${symbol}</p>  `;
+      dropdownList.append(dropdownDiv);
+    }
 
+    sendList.map((item) => {
+      let country = Object.values(item)[2];
+      let symbol = Object.values(item)[0];
+      createList(country, symbol);
+    });
+  }
+  renderList();
 
-console.log(dropdownInput.value)
+  function filterList() {
+    let dropdownFields = [...document.querySelectorAll('.get__content-field')];
 
-})
+    dropdownInput.addEventListener('input', () => {
+      let dropdownFieldsFiltered = [];
 
-currenciesList.map(item=>{
-  let country = Object.values(item)[0]
-  let symbol = Object.values(item)[1]
+      dropdownFieldsFiltered = dropdownFields.filter((field) => {
+        let input = dropdownInput.value.toLowerCase();
+        let symbol = field.getAttribute('data-symbol').toLowerCase();
+        let country = field.getAttribute('data-country').toLowerCase();
 
-  if(country){
+        return country.includes(input) || symbol.includes(input);
+      });
+
+      dropdownFields.forEach((item) => item.remove());
+
+      dropdownFieldsFiltered.forEach((item) => {
+        dropdownList.append(item);
+      });
+    });
+  }
+  filterList();
+
+  function dropdownBtn() {
+    const dropdownBtn = document.querySelector('.get__dropdown-btn');
+    const dropdownContent = document.querySelector('.get__content');
+    const backElement = document.querySelectorAll('.get__back-element');
+
+    dropdownBtn.addEventListener('click', () => {
+      dropdownContent.classList.remove('hide');
+      dropdownContent.classList.add('show');
+      document.querySelector('.get').style.boxShadow = 'none';
+      backElement.forEach((item) => {
+        item.style.display = 'none';
+      });
+    });
+
+    document.querySelectorAll('.get__content-field').forEach((item) => {
+      item.addEventListener('click', () => {
+        dropdownContent.classList.remove('show');
+        dropdownContent.classList.add('hide');
+        setImg(item.dataset.country.toLowerCase());
+        setTxt(item.dataset.symbol);
+        fetchGetData();
+        backElement.forEach((item) => {
+          item.style.display = 'flex';
+        });
+        document.querySelector('.get').style.boxShadow = '0 0 0 1px #a09ea347';
+      });
+    });
+
+    function setImg(data) {
+      let img = document.querySelector('.get__dropdown-img img');
+      img.src = `https://countryflagsapi.com/png/${data}`;
+    }
+
+    function setTxt(data) {
+      let txt = document.querySelector('.get__dropdown-txt');
+      txt.innerHTML = data;
+    }
+  }
+  dropdownBtn();
+
+  function inputHelper() {
+    const inputNumber = document.querySelector('.get__input');
+
+    if (inputNumber.value > 0) {
+      inputNumber.nextElementSibling.classList.add('active');
+    } else {
+      inputNumber.nextElementSibling.classList.remove('active');
+    }
+
+    inputNumber.addEventListener('input', () => {
+      let text = inputNumber.value;
+
+      if (text.length > 0) {
+        inputNumber.nextElementSibling.classList.add('active');
+      } else {
+        inputNumber.nextElementSibling.classList.remove('active');
+      }
+    });
+  }
+  inputHelper();
+}
+
+inputGetCurrency();
+
+async function fetchBaseData() {
+  let first = document.querySelector('.send__dropdown-txt').textContent;
+  let second = document.querySelector('.get__dropdown-txt').textContent;
+  let inputSend = document.querySelector('.send__input');
+  let inputGet = document.querySelector('.get__input');
+  let feeTxt = document.querySelector('.currencies__txt-fee');
+  let rateTxt = document.querySelector('.currencies__txt-rate');
+
+  let response = await fetch(
+    `https://v6.exchangerate-api.com/v6/${API}/pair/${first}/${second}`,
+  );
+  if (response.status === 200) {
+    let data = await response.json();
+
+    let fee = (await data.conversion_rate) * inputSend.value * 0.015;
+
+    inputGet.value = convert(
+      (await data.conversion_rate) * inputSend.value - fee,
+    );
+
+    feeTxt.textContent = `${convert(inputSend.value * 0.015)} ${first}`;
+    rateTxt.textContent = `Today’s Rate: 1.00 ${first} = ${data.conversion_rate} ${second}`;
   }
 
-  
-  renderList(country,symbol)
-})
-
-
-
-async function fetchCurrencies() {
-  // let response = await fetch(`https://openexchangerates.org/api/latest.json?app_id=${API}&base=USD&symbols=UAH`); 
-
-  // if (response.status === 200) {
-  //     let data = await response.json();
-  //     console.log(Object.values(data) )   
-      
-  // }
-
-
+  inputHelper('.get__input');
 }
 
+async function fetchGetData() {
+  let first = document.querySelector('.send__dropdown-txt').textContent;
+  let second = document.querySelector('.get__dropdown-txt').textContent;
+  let inputSend = document.querySelector('.send__input');
+  let inputGet = document.querySelector('.get__input');
+  let feeTxt = document.querySelector('.currencies__txt-fee');
+  let rateTxt = document.querySelector('.currencies__txt-rate');
 
-fetchCurrencies()
+  let response = await fetch(
+    `https://v6.exchangerate-api.com/v6/${API}/pair/${first}/${second}`,
+  );
+  if (response.status === 200) {
+    let data = await response.json();
 
+    let fee = (inputGet.value / (await data.conversion_rate)) * 0.015;
 
+    inputSend.value = convert(
+      inputGet.value / (await data.conversion_rate) + fee,
+    );
+
+    feeTxt.textContent = `${convert(inputSend.value * 0.015)} ${first}`;
+    rateTxt.textContent = `Today’s Rate: 1.00 ${first} = ${data.conversion_rate} ${second}`;
+  }
+
+  inputHelper('.get__input');
+}
+
+let send = document.querySelector('.send__input');
+let get = document.querySelector('.get__input');
+
+send.addEventListener('change', () => {
+  fetchBaseData();
+});
+get.addEventListener('change', () => {
+  fetchGetData();
+});
+
+fetchBaseData();
+
+function convert(num) {
+  return (Math.round(num * Math.pow(10, 2)) / Math.pow(10, 2)).toFixed(2);
+}
+
+inputHelper('.send__input');
+async function inputHelper(className) {
+  const inputNumber = document.querySelector(className);
+
+  if (inputNumber.value > 0) {
+    inputNumber.nextElementSibling.classList.add('active');
+  } else {
+    inputNumber.nextElementSibling.classList.remove('active');
+  }
+
+  inputNumber.addEventListener('input', () => {
+    let text = inputNumber.value;
+
+    if (text.length > 0) {
+      inputNumber.nextElementSibling.classList.add('active');
+    } else {
+      inputNumber.nextElementSibling.classList.remove('active');
+    }
+  });
+}
+
+document.addEventListener('click', (event) => {
+  function className(className) {
+    return event.target.classList.contains(className);
+  }
+
+  if (
+    !(
+      className('currencies__content-input') ||
+      className('currencies__symbol') ||
+      className('currencies__img') ||
+      className('currencies__txt') ||
+      className('currencies__country') ||
+      className('currencies__content-field') ||
+      className('currencies__dropdown-btn') ||
+      className('currencies__dropdown-img') ||
+      className('currencies__dropdown-flag') ||
+      className('currencies__dropdown-txt') ||
+      className('currencies__dropdown-arrow')
+    )
+  ) {
+    document.querySelectorAll('.currencies__content').forEach((element) => {
+      element.classList.remove('show');
+      element.classList.add('hide');
+    });
+
+    document.querySelectorAll('.currencies__item').forEach((element) => {
+      element.style.boxShadow = '0 0 0 1px #a09ea347';
+      element.style.display = 'flex';
+    });
+    document.querySelectorAll('.get__back-element').forEach((item) => {
+      item.style.display = 'flex';
+    });
+
+    document.querySelectorAll('.send__back-element').forEach((item) => {
+      item.style.display = 'flex';
+    });
+  }
+});

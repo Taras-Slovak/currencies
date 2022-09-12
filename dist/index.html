@@ -14,38 +14,68 @@
   <div class="currencies">
     <div class="currencies__inner">
 
-      <div class="currencies__item">
-        <label for="amount" class="currencies__label">
+      <div class="currencies__item send">
+        <input value="100" id="amount" type="number" class="currencies__input send__input send__back-element">
+
+        <label for="amount" class="currencies__label active send__back-element">
           You send
         </label>
-        <input value="100" id="amount" type="number" class="currencies__input">
-        <div class="currencies__dropdown">
-          <div class="currencies__dropdown-inner">
 
-            <input class="currencies__dropdown-input" placeholder="Send money from" autocomplete="off" tabindex="3" type="search">
-
-
-            <div class="currencies__dropdown-list">
-            </div>
-
-
+        <div class="currencies__dropdown-btn send__dropdown-btn send__back-element">
+          <div class="currencies__dropdown-img send__dropdown-img">
+            <img class="currencies__dropdown-flag" src=" https://countryflagsapi.com/png/america" alt="flag">
           </div>
+          <p class="currencies__dropdown-txt send__dropdown-txt">USD</p>
+          <span class="currencies__dropdown-arrow">
+            <img src="https://img.icons8.com/material-sharp/24/000000/expand-arrow--v1.png">
+          </span>
         </div>
 
+        <div class="currencies__content send__content hide">
+          <input class="currencies__content-input send__content-input" placeholder="Send money from" autocomplete="off" tabindex="3" type="search">
+          <div class="currencies__content-list send__content-list"></div>
+        </div>
       </div>
 
-      <div class="currencies__fee">
-        <p class="currencies__txt">Fee:</p>
-        <p class="currencies__txt">Today’s rate:</p>
+      <div class="currencies__item get">
+
+        <input value="12345" type="number" class="currencies__input get__input get__back-element">
+
+        
+
+        <label for="amount" class="currencies__label active get__back-element">
+          Recipient gets
+        </label>
+
+        <div class="currencies__dropdown-btn get__dropdown-btn get__back-element">
+          <div class="currencies__dropdown-img get__dropdown-img">
+            <img class="currencies__dropdown-flag" src=" https://countryflagsapi.com/png/ukraine" alt="flag">
+          </div>
+          <p class="currencies__dropdown-txt get__dropdown-txt">UAH</p>
+          <span class="currencies__dropdown-arrow">
+            <img src="https://img.icons8.com/material-sharp/24/000000/expand-arrow--v1.png">
+          </span>
+        </div>
+
+        <div class="currencies__content get__content hide">
+          <input class="currencies__content-input get__content-input" placeholder="Get money from" autocomplete="off" tabindex="3" type="search">
+          <div class="currencies__content-list get__content-list"></div>
+        </div>
       </div>
 
-      <div class="currencies__rate">
-        <p class="currencies__txt">Rate:</p>
-        <p class="currencies__txt">Today’s rate:</p>
+      <div class="currencies__calculation">
+        <div class="currencies__calculation-item">
+          <p class="currencies__txt">Fee:</p>
+          <span class="currencies__separator"></span>
+          <p class="currencies__txt-fee">Loading...</p>
+        </div>
+
+        <div class="currencies__calculation-item">
+          <p class="currencies__txt">Rate:</p>
+          <span class="currencies__separator"></span>
+          <p class="currencies__txt-rate">Loading...</p>
+        </div>
       </div>
-
-      <a class="currencies_ link" href="/">Get started</a>
-
     </div>
   </div>
   <script src="/index.6efc6676.js"></script>

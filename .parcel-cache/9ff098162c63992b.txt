@@ -18,7 +18,7 @@
 56C:\Users\user\Desktop\currencies\node_modules\source-map133058761265597356 1
 68C:\Users\user\Desktop\currencies\node_modules\@parcel\diagnostic\src133058761197148363 1
 66C:\Users\user\Desktop\currencies\node_modules\json5\lib\unicode.js121436361000000000 0
-37C:\Users\user\Desktop\currencies\dist133058930141314010 1
+37C:\Users\user\Desktop\currencies\dist133074531770017492 1
 74C:\Users\user\Desktop\currencies\node_modules\@parcel\workers\lib\index.js121436361000000000 0
 64C:\Users\user\Desktop\currencies\node_modules\picocolors\LICENSE121436361000000000 0
 73C:\Users\user\Desktop\currencies\node_modules\supports-color\package.json133058761265284837 0
@@ -3094,7 +3094,7 @@
 69C:\Users\user\Desktop\currencies\node_modules\@parcel\package-manager133058761264280254 1
 97C:\Users\user\Desktop\currencies\node_modules\caniuse-lite\data\features\extended-system-fonts.js121436361000000000 0
 90C:\Users\user\Desktop\currencies\node_modules\caniuse-lite\data\features\feature-policy.js121436361000000000 0
-60C:\Users\user\Desktop\currencies\dist\currencies.59712999.js133058920514672841 0
+60C:\Users\user\Desktop\currencies\dist\currencies.59712999.js133074531769917452 0
 81C:\Users\user\Desktop\currencies\node_modules\caniuse-lite\data\features\fetch.js121436361000000000 0
 86C:\Users\user\Desktop\currencies\node_modules\caniuse-lite\data\features\filereader.js121436361000000000 0
 90C:\Users\user\Desktop\currencies\node_modules\caniuse-lite\data\features\filereadersync.js121436361000000000 0
@@ -4340,9 +4340,9 @@
 59C:\Users\user\Desktop\currencies\node_modules\.bin\svgo.ps1133058761267628744 0
 57C:\Users\user\Desktop\currencies\node_modules\.bin\terser133058761267628744 0
 61C:\Users\user\Desktop\currencies\node_modules\.bin\terser.ps1133058761267628744 0
-64C:\Users\user\Desktop\currencies\dist\currencies.59712999.js.map133058920514722844 0
-56C:\Users\user\Desktop\currencies\dist\index.5dc62a6b.css133058920514652826 0
-60C:\Users\user\Desktop\currencies\dist\index.5dc62a6b.css.map133058920514722844 0
-55C:\Users\user\Desktop\currencies\dist\index.6efc6676.js133058930141314010 0
-59C:\Users\user\Desktop\currencies\dist\index.6efc6676.js.map133058930141314010 0
-48C:\Users\user\Desktop\currencies\dist\index.html133058920514652826 0
+64C:\Users\user\Desktop\currencies\dist\currencies.59712999.js.map133074531769997477 0
+56C:\Users\user\Desktop\currencies\dist\index.5dc62a6b.css133074531769917452 0
+60C:\Users\user\Desktop\currencies\dist\index.5dc62a6b.css.map133074531769997477 0
+55C:\Users\user\Desktop\currencies\dist\index.6efc6676.js133074531769917452 0
+59C:\Users\user\Desktop\currencies\dist\index.6efc6676.js.map133074531769997477 0
+48C:\Users\user\Desktop\currencies\dist\index.html133074531769917452 0

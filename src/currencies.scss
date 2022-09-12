@@ -1,75 +1,189 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   min-height: 100vh;
+  color: #494949;
   background: linear-gradient(to right, #22c1c3, #fdbb2d);
-  font-family: 'Raleway', sans-serif;
-  color: rgb(73, 73, 73);
+  font-family: Raleway, sans-serif;
 }
 
-.currencies{
-  max-width:560px;
-  margin:100px auto 0 auto;
-
+.currencies {
+  max-width: 560px;
+  height: 434px;
   background-color: #fff;
-    border: 1px solid hsla(260,3%,63%,.28);
-    border-radius: 12px;
-    background-color: rgb(255, 255, 255);
-  &__inner{    
-    max-width: 500px;
-    margin:auto;
-    
-    
-  }
-  &__item{
-  position: relative;
+  border: 1px solid #a09ea347;
+  border-radius: 12px;
+  margin: 100px auto 0;
+}
+
+.currencies__inner {
+  max-width: 500px;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 40px;
   display: flex;
+}
 
+@media screen and (max-width: 540px) {
+  .currencies__inner {
+    margin-left: 10px;
+    margin-right: 10px;
   }
+}
 
-  &__input{
-    width: 350px;
-    height:70px;
-    border: 1px solid hsla(260,3%,63%,.28);
-    border-radius: 6px;
-  }
+.currencies__item {
+  border-radius: 6px;
+  flex-grow: 1;
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+  box-shadow: 0 0 0 1px #a09ea347;
+}
 
-  &__dropdown{    
-    width: 140px;
-    height:70px;
-    border: 1px solid hsla(260,3%,63%,.28);
-    border-radius: 6px;
+@media screen and (max-width: 500px) {
+  .currencies__item {
+    flex-grow: 0;
   }
+}
 
-  &__dropdown-inner{
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    display: block;
-    background-color:white;
-  }
+.currencies__label {
+  color: #77767a;
+  background-color: #fff;
+  padding: 0 5px;
+  transition: all 0.2s;
+  position: absolute;
+  top: 27px;
+  left: 10px;
+}
 
-  &__dropdown-input{
-    width: 100%;
-    height:70px;
-    border: 1px solid hsla(260,3%,63%,.28);
-    border-radius: 6px;
+.currencies__input {
+  height: 70px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  flex-grow: 1;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 420px) {
+  .currencies__input {
+    width: 100px;
   }
-  &__dropdown-field{
-    height: 72px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    
-    &:hover{
-      background-color:rgb(237, 237, 237);
-    }
-  }
+}
+
+.currencies__input:focus ~ label {
+  transform: translate3d(0, -37px, 0);
+}
+
+.currencies__input:focus {
+  outline: none;
+}
+
+.currencies__dropdown-btn {
+  width: 140px;
+  height: 70px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.currencies__dropdown-img {
+  width: 30px;
+}
+
+.currencies__dropdown-img img {
+  width: 100%;
+  height: auto;
+}
+
+.currencies__dropdown-txt {
+  font-size: 20px;
+}
+
+.currencies__content {
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.currencies__content-input {
+  width: 100%;
+  height: 70px;
+  border: 1px solid #a09ea347;
+  border-radius: 6px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.currencies__content-input:focus {
+  outline: none;
+}
+
+.currencies__content-list {
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.currencies__content-field {
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 23px;
+  transition: all 0.2s;
+  display: flex;
+}
+
+.currencies__content-field:hover {
+  background-color: #ededed;
+}
+
+.currencies__country {
+  align-items: center;
+  gap: 5px;
+  display: flex;
+}
+
+.currencies__img {
+  width: 30px;
+  height: auto;
+}
+
+.currencies__calculation {
+  color: #77767a;
+  margin-top: 30px;
+}
+
+.currencies__calculation-item {
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 20px;
+  display: flex;
+}
+
+.currencies__separator {
+  height: 1px;
+  background-color: #77767a;
+  flex-grow: 1;
+  margin-block: 1em;
+  margin-inline: 0;
+  display: block;
+}
+
+.get {
+  margin-top: 30px;
+}
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.active {
+  transform: translate3d(0, -37px, 0);
 }
